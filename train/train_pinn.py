@@ -118,12 +118,10 @@ history = []
 
 # TRAINING LOOP
 print("\nTraining Started...\n")
-
 for epoch in range(epochs):
     model.train()
     pred = model(X_train_tensor)
 
-    
     # DATA LOSS
     data_loss = mse_loss(pred, y_train_tensor)
 
