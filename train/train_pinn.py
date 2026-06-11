@@ -8,8 +8,7 @@ import torch.optim as optim
 from torch.optim.lr_scheduler import ReduceLROnPlateau
 
 
-# PROJECT PATH
-
+# PROJECT PATH SETUP
 PROJECT_ROOT = os.path.dirname(
     os.path.dirname(
         os.path.abspath(__file__)
@@ -21,7 +20,6 @@ from models.pinn_model import PINN
 
 
 # LOAD DATA
-
 data_path = os.path.join(
     PROJECT_ROOT,
     "data",
@@ -29,7 +27,6 @@ data_path = os.path.join(
 )
 
 data = pd.read_csv(data_path)
-
 print("=" * 60)
 print("AGRICULTURE PINN TRAINING (TANH VERSION)")
 print("=" * 60)
@@ -221,4 +218,4 @@ os.makedirs(os.path.join(PROJECT_ROOT, "results"), exist_ok=True)
 history_df.to_csv(history_path, index=False)
 
 print(f"Training history saved: {history_path}")
-print("\nTraining Finished!")
+print("\nTraining Finished!!")
